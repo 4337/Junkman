@@ -1,7 +1,7 @@
 <h3>Junkman The Concept. 🤭</h3> 
 
 Kiedyś obudziłem się rano i idąc do porannej toalety zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine)
-czyli taki który z reguły służy do obliczania długości instrukcji procesora. Tego typu disassemblery były historycznie wykorzystywane na przykład w technice 
+czyli taki, który z reguły służy do obliczania długości instrukcji procesora. Tego typu disassemblery były historycznie wykorzystywane na przykład w technice 
 ukrywania punktu wejścia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, w którym człowiek wpada na genialne pomysły i tak też się stało w tym przypadku.
 Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji assmblera, a ściślej mówiąc nie będę ich tworzył tylko kopiował.
 Ponieważ będą to bloki instrukcji kopiowane z istniejącego oprogramowania np. systemowego to nie będzie ich można wykorzystać do statycznej detekcji poza tym będą 
@@ -15,9 +15,9 @@ Permutator, który zmienia warianty instrukcji assemblera np. mov eax, 1337 na m
 Komponent który zminia losowo wykorzystywane rejestry procesora i bloki kodu — przy czym właściwie prawie każda pojedyncza instrukcja może być traktowana jako osobny blok podstawowy.
 Opcjonalne elementy, które np. wykrywają emulatory, debugery etc.
 Komponent, który tworzy losowe instrukcje, aby zwiększyć losowość en/dekryptora.
-
 Załóżmy, że tak wygląda podstawowy dekryptor bez komponentu, który tworzy losowe instrukcje.
 
+<pre>
 [main_basic_block_a]
 init: 
 [basic_block_a]
@@ -34,6 +34,7 @@ loop_labler:
 [main_basic_block_c]
 redirect:
     (permutatoion) jmp 2_decrypted_code
+</pre>
 	
 Tak natomiast wygląda dekryptor z komponentem, który tworzy losowe instrukcje.
 
