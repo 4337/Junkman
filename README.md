@@ -5,7 +5,7 @@ czyli taki, który z reguły służy do obliczania długości instrukcji proceso
 ukrywania punktu wejścia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, w którym człowiek wpada na genialne pomysły i tak też się stało w tym przypadku.
 Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji assmblera, a ściślej mówiąc nie będę ich tworzył tylko kopiował.
 Ponieważ będą to bloki instrukcji kopiowane z istniejącego oprogramowania np. systemowego to nie będzie ich można wykorzystać do statycznej detekcji, poza tym będą 
-to instrukcje trybu użytkownika.
+to instrukcje trybu użytkownika, które jak wiadomo pasują do programów trybu użytkownika.
 
 <h3>Rys historyczny.</h3>
 
