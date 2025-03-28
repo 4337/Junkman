@@ -35,9 +35,9 @@ loop_labler:
 redirect:
     (permutatoion) jmp 2_decrypted_code
 </pre>
-	
 Tak natomiast wygląda dekryptor z komponentem, który tworzy losowe instrukcje.
 
+<pre>
 [main_basic_block_a]
 (permutatoion) jmp init
 trash asm instructions
@@ -80,6 +80,7 @@ trash asm instructions
 ...
 over_d:
     (permutatoion) jmp 2_decrypted_code
+</pre>
 
 Ogólnie rzecz biorąc, możemy wstawić do en/decryptora dowolną ilość bloków "śmieciowych instrukcji". 
 Historycznie te bloki instrukcji były tworzone oczywiście w językach niskiego poziomu i kluczowe jest tu słowo "tworzone" ponieważ tworzenie losowych instrukcji 
