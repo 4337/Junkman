@@ -6,7 +6,7 @@ ukrywania punktu wejścia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, 
 Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji assmblera, a ściślej mówiąc nie będę ich tworzył tylko kopiował.
 Ponieważ będą to bloki instrukcji kopiowane z istniejącego oprogramowania np. systemowego to nie będzie ich można wykorzystać do statycznej detekcji, poza tym będą 
 to instrukcje trybu użytkownika, które jak wiadomo pasują do programów trybu użytkownika.<br/>
-Jako że, różne wichry targają moim życiem, pomysł z toalety umarł na lata aż znalazłem odpowiednie HDE dla x64 (którego niechciało mi się pisać).
+Jako że, różne wichry targają moim życiem, pomysł z toalety umarł na lata aż znalazłem odpowiednie HDE dla x64 (którego nie chciało mi się pisać).
 
 <h3>Rys historyczny.</h3>
 
