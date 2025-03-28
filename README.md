@@ -9,8 +9,8 @@ to instrukcje trybu użytkownika, które jak wiadomo pasują do programów trybu
 
 <h3>Rys historyczny.</h3>
 
-Ogólnie silniki polimorficzne składają się z kilku głównych komponentów. 
-Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.
+Ogólnie silniki polimorficzne składają się z kilku głównych komponentów.<br/>
+Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.<br/>
 Permutator, który zmienia warianty instrukcji assemblera np. 
 <pre>
 mov eax, 1337
