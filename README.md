@@ -1,4 +1,4 @@
-<h3>Junkman The Concept</h3> 🤭
+<h3>Junkman The Concept.</h3> 🤭
 
 Kiedyś obudziłem się rano i idąc do porannej toalety zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine)
 czyli taki który z reguły służy do obliczania długości instrukcji procesora. Tego typu disassemblery były historycznie wykorzystywane na przykład w technice 
@@ -7,7 +7,7 @@ Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji as
 Ponieważ będą to bloki instrukcji kopiowane z istniejącego oprogramowania np. systemowego to nie będzie ich można wykorzystać do statycznej detekcji poza tym będą 
 to instrukcje trybu użytkownika.
 
-Rys historyczny.
+<h3>Rys historyczny.</h3>
 
 Ogólnie silniki polimorficzne składają się z kilku głównych komponentów. 
 Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.
