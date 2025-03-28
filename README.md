@@ -11,7 +11,15 @@ to instrukcje trybu użytkownika, które jak wiadomo pasują do programów trybu
 
 Ogólnie silniki polimorficzne składają się z kilku głównych komponentów. 
 Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.
-Permutator, który zmienia warianty instrukcji assemblera np. mov eax, 1337 na mov eax, 1330, add eax, 7.
+Permutator, który zmienia warianty instrukcji assemblera np. 
+<pre>
+mov eax, 1337
+</pre>
+na 
+<pre>
+mov eax, 1330, 
+add eax, 7
+</pre>
 Komponent który zminia losowo wykorzystywane rejestry procesora i bloki kodu — przy czym właściwie prawie każda pojedyncza instrukcja może być traktowana jako osobny blok podstawowy.
 Opcjonalne elementy, które np. wykrywają emulatory, debugery etc.
 Komponent, który tworzy losowe instrukcje, aby zwiększyć losowość en/dekryptora.
