@@ -1,17 +1,17 @@
-<h3>Junkman The Concept. 🤭</h3> 
+<h3>Junkman The Concept. ??</h3> 
 
-Kiedyś obudziłem się rano i idąc do porannej toalety zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine)
-czyli taki, który z reguły służy do obliczania długości instrukcji procesora. Tego typu disassemblery były historycznie wykorzystywane na przykład w technice 
-ukrywania punktu wejścia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, w którym człowiek wpada na genialne pomysły i tak też się stało w tym przypadku.
-Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji assmblera, a ściślej mówiąc nie będę ich tworzył tylko kopiował.
-Ponieważ będą to bloki instrukcji kopiowane z istniejącego oprogramowania np. systemowego to nie będzie ich można wykorzystać do statycznej detekcji, poza tym będą 
-to instrukcje trybu użytkownika, które jak wiadomo pasują do programów trybu użytkownika.
+Kiedy? obudzi?em si? rano i id?c do porannej toalety zastanawia?em si?, do czego mo?na jeszcze wykorzysta? disassembler HDE (Hacker Disassembler Engine).
+Czyli taki, kt��ry z regu?y s?u?y do obliczania d?ugo?ci instrukcji procesora. Tego typu disassemblery by?y historycznie wykorzystywane na przyk?ad w technice 
+ukrywania punktu wej?cia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, w kt��rym cz?owiek wpada na genialne pomys?y i tak te? si? sta?o w tym przypadku.
+Ot��? wymy?li?em, ?e wykorzystam HDE do tworzenia ?mieciowych instrukcji assmblera, a ?ci?lej m��wi?c nie b?d? ich tworzy? tylko kopiowa?.
+Poniewa? b?d? to bloki instrukcji kopiowane z istniej?cego oprogramowania np. systemowego to nie b?dzie ich mo?na wykorzysta? do statycznej detekcji, poza tym b?d? 
+to instrukcje trybu u?ytkownika, kt��re jak wiadomo pasuj? do program��w trybu u?ytkownika.
 
 <h3>Rys historyczny.</h3>
 
-Ogólnie silniki polimorficzne składają się z kilku głównych komponentów.<br/>
-Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.<br/>
-Permutator, który zmienia warianty instrukcji assemblera np. 
+Og��lnie silniki polimorficzne sk?adaj? si? z kilku g?��wnych komponent��w.<br/>
+Assembler lub dissambler, kt��ry pozwala tworzy? lub modyfikowa? kod assmblera.<br/>
+Permutator, kt��ry zmienia warianty instrukcji assemblera np. 
 <pre>
 mov eax, 1337
 </pre>
@@ -20,10 +20,10 @@ na
 mov eax, 1330, 
 add eax, 7
 </pre>
-Komponent który zminia losowo wykorzystywane rejestry procesora i bloki kodu — przy czym właściwie prawie każda pojedyncza instrukcja może być traktowana jako osobny blok podstawowy.<br/>
-Opcjonalne elementy, które np. wykrywają emulatory, debugery etc.<br/>
-Komponent, który tworzy losowe instrukcje, aby zwiększyć losowość en/dekryptora.<br/>
-Załóżmy, że tak wygląda podstawowy dekryptor bez komponentu, który tworzy losowe instrukcje.
+Komponent kt��ry zminia losowo wykorzystywane rejestry procesora i bloki kodu �� przy czym w?a?ciwie prawie ka?da pojedyncza instrukcja mo?e by? traktowana jako osobny blok podstawowy.<br/>
+Opcjonalne elementy, kt��re np. wykrywaj? emulatory, debugery etc.<br/>
+Komponent, kt��ry tworzy losowe instrukcje, aby zwi?kszy? losowo?? en/dekryptora.<br/>
+Za?��?my, ?e tak wygl?da podstawowy dekryptor bez komponentu, kt��ry tworzy losowe instrukcje.
 
 <pre>
 [main_basic_block_a]
@@ -43,7 +43,7 @@ loop_labler:
 redirect:
     (permutatoion) jmp 2_decrypted_code
 </pre>
-Tak natomiast wygląda dekryptor z komponentem, który tworzy losowe instrukcje.
+Tak natomiast wygl?da dekryptor z komponentem, kt��ry tworzy losowe instrukcje.
 
 <pre>
 [main_basic_block_a]
@@ -90,9 +90,9 @@ over_d:
     (permutatoion) jmp 2_decrypted_code
 </pre>
 
-Ogólnie rzecz biorąc, możemy wstawić do en/decryptora dowolną ilość bloków "śmieciowych instrukcji". <br/>
-Historycznie te bloki instrukcji były tworzone oczywiście w językach niskiego poziomu i kluczowe jest tu słowo "tworzone" ponieważ tworzenie losowych instrukcji 
-powodowało na przykład, że w aplikacjach trybu użytkownika pojawiały się uprzywilejowane instrukcje trybu jądra i ogólnie charakterystyka takich bloków była kompletnie nie logiczna.
+Og��lnie rzecz bior?c, mo?emy wstawi? do en/decryptora dowoln? ilo?? blok��w "?mieciowych instrukcji". <br/>
+Historycznie te bloki instrukcji by?y tworzone oczywi?cie w j?zykach niskiego poziomu i kluczowe jest tu s?owo "tworzone" poniewa? tworzenie losowych instrukcji 
+powodowa?o na przyk?ad, ?e w aplikacjach trybu u?ytkownika pojawia?y si? uprzywilejowane instrukcje trybu j?dra i og��lnie charakterystyka takich blok��w by?a kompletnie nie logiczna.
 ...
 ...
 ...
