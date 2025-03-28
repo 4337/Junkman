@@ -1,4 +1,4 @@
-<h3>Junkman The Concept. ??</h3> 
+<h3>Junkman The Concept. </h3> 
 
 Kiedyœ obudzi³em siê rano i id¹c do porannej toalety zastanawia³em siê, do czego mo¿na jeszcze wykorzystaæ disassembler HDE (Hacker Disassembler Engine).
 Czyli taki, który z regu³y s³u¿y do obliczania d³ugoœci instrukcji procesora. Tego typu disassemblery by³y historycznie wykorzystywane na przyk³ad w technice 
