@@ -1,4 +1,4 @@
-<img src="44.avif"/><br/>
+<img src="44.jpg"/><br/>
 <h3>Junkman The Concept. 🤗 </h3> 
 
 Kiedyś obudziłem się rano i idąc do porannej toalety. Zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine).
