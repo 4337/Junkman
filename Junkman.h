@@ -1,19 +1,9 @@
 #pragma once
 
 #define J_DEBUG
-#include <cstdio>
 
 namespace J {
 
-	/// <summary>
-	/// Bycie po stronie "good guys" ma tê zalete ¿e mo¿emy wszystko pisaæ jako POC.
-	/// Wykorzystywanie niskopoziomowego kodu który ju¿ istnieje ma tê wadê ¿e kod w plikach wykonywalnych 
-	/// jest doœæ "schematyczny" np. mamy prologi i eplilogi zazwyczaj w 32-bitowym kodzie, FPO, które te¿ jest jednak doœæ oczywiste - ogólnie kod zwi¹zany z sekwencj¹ wywo³añ.
-	/// W x64 mamy shadow-stack, czy wkoñcu jakieœ wype³niacze typu INT 3 w przypadku procesów które s¹ debugowane, lub œmieci miêdzy jedn¹ procedur¹ a nastêpno¹.
-	/// Kiedy chcemy kopiowaæ istniej¹cy kod w niecnych celach to pewnie chcieli byœmy omin¹æ te "oczywiste" sekwencje bo mog³oby siê okazaæ ¿e nasz "junk code" to wielu przypadkach 
-	/// prolog funkcji i z tego powodu mamy w³aœnie poni¿sze wyliczenie, które jest parametrem metody oznaczonym jako "RESERVED".
-	/// </summary>
-	
 	constexpr int PROLOGUE = 0x1;
 	constexpr int EPILOGUE = 0x2;
 	constexpr int SHADOW_STACK = 0x3;
