@@ -12,8 +12,6 @@ class Process : public Memory {
 	DWORD GetDllHandleByProcessId(DWORD pid, const TCHAR* dll) noexcept(true);
 	DWORD GetPidByName(const TCHAR* name) const noexcept(true);
 
-	unsigned char* Read(HANDLE h_mod, LPVOID base_addr, SIZE_T size) noexcept(true);
-
 public:
 
 	explicit Process(DWORD pid) noexcept(true);

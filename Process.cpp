@@ -160,22 +160,6 @@ J::Process::Process(DWORD pid, const TCHAR* mod_name) noexcept(true) : Memory(),
 
 }
 
-unsigned char* J::Process::Read(HANDLE h_mod, LPVOID base_addr, SIZE_T size) noexcept(true) {
-
-	unsigned char* buff = new unsigned char[size + 1];
-	if (buff != nullptr) {
-
-		SIZE_T r_size;
-		if (!ReadProcessMemory(h_mod, base_addr, buff, size, &r_size) == TRUE) {
-			delete[] buff;
-			buff = nullptr;
-		}
-
-	}
-	return buff;
-
-}
-
 J::Process::Process(const TCHAR* lib, const CHAR* proc) noexcept(true) : self_proc_(false), Memory() {
 
 	HMODULE mod = LoadLibrary(lib);
