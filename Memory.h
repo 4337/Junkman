@@ -19,7 +19,7 @@ namespace J {
 
 		HANDLE handler_;
 
-		code_block bytes_;   //raw code range   do zmiany raczej na jakis vector<unsigned char> albo cos w tym stylu. Binary string 
+		code_block bytes_;   
 
 	public:
 
