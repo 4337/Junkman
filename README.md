@@ -94,7 +94,15 @@ over_d:
 
 Ogólnie rzecz biorąc, możemy wstawić do en/decryptora dowolną ilość bloków "śmieciowych instrukcji". <br/>
 Historycznie te bloki instrukcji były tworzone oczywiście w językach niskiego poziomu i kluczowe jest tu słowo "tworzone" ponieważ tworzenie losowych instrukcji 
-powodowało na przykład, że w aplikacjach trybu użytkownika pojawiały się uprzywilejowane instrukcje trybu jądra i ogólnie charakterystyka takich bloków była kompletnie nie logiczna.
-...
-...
+powodowało na przykład, że w aplikacjach trybu użytkownika pojawiały się uprzywilejowane instrukcje trybu jądra i ogólnie charakterystyka takich bloków była kompletnie nielogiczna.
+Wykorzystując HDE możemy tworzyć bloki instrukcji, które są zgodne z kontekstem, w którym działa aplikacja, możemy również omijać określone instrukcje czy bloki kodu. Na przykład 
+instrukcje INT 3 w przypadku procesów, prologi, epilogi, shadow stack i tak dalej.
+
+<h3>Obrazki</h3>   
+<img src="./1.png"/>
+
+<h3>To do</h3>
+Implementacja File.cpp<br/>
+Implementacja DetectAndSkip<br/>
+Oczywiście refactoring i poprawki ^^
 ...
