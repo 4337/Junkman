@@ -1,7 +1,7 @@
 <img src="44.jpg"/><br/>
 <h3>Junkman The Concept. 🤗 </h3> 
 
-Kiedyś obudziłem się rano i idąc do porannej toalety. Zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine).
+Kiedyś obudziłem się rano i idąc do porannej toalety, zastanawiałem się, do czego można jeszcze wykorzystać disassembler HDE (Hacker Disassembler Engine).
 Czyli taki, który z reguły służy do obliczania długości instrukcji procesora. Tego typu disassemblery były historycznie wykorzystywane na przykład w technice 
 ukrywania punktu wejścia (EPO). Jak wiadomo toaleta, jest najlepszym miejscem, w którym człowiek wpada na genialne pomysły i tak też się stało w tym przypadku.
 Otóż wymyśliłem, że wykorzystam HDE do tworzenia śmieciowych instrukcji assmblera, a ściślej mówiąc nie będę ich tworzył tylko kopiował.
