@@ -1,0 +1,8 @@
+﻿  Test.cpp
+Z:\work\C && C++\Junk\Test\Test.cpp(34,12): warning C4477: „printf”: ciąg formatu „%02x” wymaga argumentu typu „unsigned int”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64”
+Z:\work\C && C++\Junk\Test\Test.cpp(34,12): message : rozważ użycie elementu „%zx” w ciągu formatu
+  Trwa generowanie kodu
+  Previous IPDB not found, fall back to full compilation.
+  All 287 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Zakończono generowanie kodu
+  Test.vcxproj -> Z:\work\C && C++\Junk\Junkman\x64\Release\Test.exe
