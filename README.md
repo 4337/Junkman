@@ -102,7 +102,9 @@ instrukcje INT 3 w przypadku procesów, prologi, epilogi, shadow stack i tak dal
 <img src="./1.png"/>
 
 <h3>To do</h3>
-Implementacja File.cpp<br/>
-Implementacja DetectAndSkip<br/>
-Oczywiście refactoring i poprawki ^^
-...
+<ul>
+<li>Implementacja File.cpp</li>
+<li>Implementacja DetectAndSkip</li>
+<li>Oczywiście refactoring i poprawki ^^</li>
+<li>Poprawka README.md - może kiedyś będzie mi się chciało to napisać</li>
+</ul>
