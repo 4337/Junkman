@@ -155,14 +155,14 @@
   <ItemGroup>
     <ClCompile Include="Disasm\hde64.c" />
     <ClCompile Include="File.cpp" />
-    <ClCompile Include="Junkman.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Process.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Disasm\hde64.h" />
     <ClInclude Include="File.h" />
-    <ClInclude Include="Junkman.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Process.h" />
   </ItemGroup>

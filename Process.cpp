@@ -5,7 +5,7 @@
 #include <iostream>
 #include <tchar.h>
 
-#include "Junkman.h"
+#include "Utils.h"
 #include "Memory.h"
 #include "Process.h"
 #include "Disasm/hde64.h"
@@ -147,7 +147,14 @@ J::Process::GetDllHandleByProcessId(DWORD pid, const TCHAR* dll) noexcept(true) 
 
 }
 
-J::Section J::Process::GetCodeSection(HANDLE h_mod, LPVOID addr) {
+/// <summary>
+/// 
+/// </summary>
+/// <param name="h_mod"></param>
+/// <param name="addr"></param>
+/// <returns></returns>
+J::Section 
+J::Process::GetCodeSection(HANDLE h_mod, LPVOID addr) {
 
 	SIZE_T b_num;
 	IMAGE_DOS_HEADER dos = { 0 };
