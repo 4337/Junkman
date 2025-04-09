@@ -36,17 +36,6 @@ namespace J {
 	} IMAGE_DOS_HEADER, * PIMAGE_DOS_HEADER;
 #pragma pack(pop)
 
-
-	struct CodeSection {
-
-		DWORD  size_;
-		FARPROC base_addr_;
-
-	};
-
-	CodeSection GetCodeSection(HANDLE h_mod, LPVOID addr = NULL);
-
-	
 	inline bool DetectShadowStack(UINT8 op, UINT8 ins_len) {
 		return (op == 0x48 && ins_len == 4) ? true : false;
 	}
@@ -81,6 +70,7 @@ namespace J {
 	bool DetectEpilogue()
 	bool DetectFPO()
 	void FixRelocations() 
+	SITE_T SkipIAT()
 	*/
 
 };

@@ -7,6 +7,8 @@ class Process : public Memory {
 
 	bool self_proc_;
 
+	Section GetCodeSection(HANDLE h_mod, LPVOID addr = NULL);
+
 	FARPROC GetBaseAddresByHandle(HANDLE h_mod) noexcept(true);
 
 	DWORD GetDllHandleByProcessId(DWORD pid, const TCHAR* dll) noexcept(true);

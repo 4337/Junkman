@@ -147,6 +147,27 @@ J::Process::GetDllHandleByProcessId(DWORD pid, const TCHAR* dll) noexcept(true) 
 
 }
 
+J::Section J::Process::GetCodeSection(HANDLE h_mod, LPVOID addr) {
+
+	SIZE_T b_num;
+	IMAGE_DOS_HEADER dos = { 0 };
+	Section code = { 0 };
+
+	if (ReadProcessMemory(h_mod, addr, &dos, sizeof(IMAGE_DOS_HEADER), &b_num)) {
+		if (b_num == sizeof(IMAGE_DOS_HEADER)) {
+			LONG64 offset = reinterpret_cast<LONG64>(addr) + dos.e_lfanew;
+			IMAGE_NT_HEADERS64 nt = { 0 };
+			if (ReadProcessMemory(h_mod, reinterpret_cast<LPCVOID>(offset), &nt, sizeof(IMAGE_NT_HEADERS64), &b_num)) {
+				offset = reinterpret_cast<LONG64>(addr);
+				offset += nt.OptionalHeader.BaseOfCode;
+				code.size_ = nt.OptionalHeader.SizeOfCode;
+				code.base_addr_ = (FARPROC)offset;
+			}
+		}
+	}
+	return code;
+}
+
 /// <summary>
 /// 
 /// </summary>
@@ -176,7 +197,7 @@ J::code_block
 J::Process::Code(DWORD ins_off, DWORD ins_cnt, int skip) {
 
 	if (!self_proc_) {
-		J::CodeSection cs = J::GetCodeSection(handler_, bytes_.base_addr_);
+		J::Section cs = GetCodeSection(handler_, bytes_.base_addr_);
 		if (cs.size_ != 0 && cs.base_addr_ != NULL) {
 
 			bytes_.size_ = cs.size_;
@@ -187,6 +208,8 @@ J::Process::Code(DWORD ins_off, DWORD ins_cnt, int skip) {
 	else {
 		bytes_.size_ = static_cast<SIZE_T>(ins_cnt) * 15;
 	}
+
+	//skip IAT
     
 	bytes_.raw_ = new unsigned char[bytes_.size_ + 2];
 	if (bytes_.raw_ == nullptr) {

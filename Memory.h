@@ -4,6 +4,13 @@
 
 namespace J {
 
+	struct Section {
+
+		DWORD  size_;
+		FARPROC base_addr_;
+
+	};
+
 	using binary_string = std::basic_string<unsigned char>;
 
 	struct code_block {
