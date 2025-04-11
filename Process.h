@@ -11,6 +11,8 @@ class Process : public Memory {
 
 	FARPROC GetBaseAddresByHandle(HANDLE h_mod) noexcept(true);
 
+	SIZE_T SkipIAT(HANDLE h_mod, LPVOID addr = NULL);
+
 	DWORD GetDllHandleByProcessId(DWORD pid, const TCHAR* dll) noexcept(true);
 	DWORD GetPidByName(const TCHAR* name) const noexcept(true);
 

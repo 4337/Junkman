@@ -30,10 +30,10 @@ FARPROC J::Process::GetBaseAddresByHandle(HANDLE h_mod) noexcept(true) {
 /// <summary>
 /// Pobierz processId na podstawie nazwy process
 /// </summary>
-/// <param name="name">const TCHAR* - wska≈∏nik do nazwy procesu</param>
+/// <param name="name">const TCHAR* - wskaünik do nazwy procesu</param>
 /// <returns>
 /// -1 = error
-///  0 = process nie zosta¬≥ znaleziony
+///  0 = process nie zosta≥ znaleziony
 ///  OK = identyfikator process  
 /// </returns>
 DWORD 
@@ -81,16 +81,16 @@ J::Process::Process(DWORD pid) noexcept(true) : Memory(pid), self_proc_(false) {
 J::Process::Process(const TCHAR* proc_name) noexcept(true) : Memory(), self_proc_(false) {
 	DWORD pid = GetPidByName(proc_name);
 	if (pid != -1) {
-		handler_ = OpenProcess(PROCESS_VM_READ, FALSE, pid);
+		handler_ = OpenProcess(PROCESS_VM_READ | PROCESS_QUERY_INFORMATION, FALSE, pid);
 		bytes_.base_addr_ = GetBaseAddresByHandle(handler_);
 	}
 }
 
 /// <summary>
-/// Pobiera uchwyt do pliku dll w procesie okre≈ìlonym przez identyfikator processu
+/// Pobiera uchwyt do pliku dll w procesie okreúlonym przez identyfikator processu
 /// </summary>
 /// <param name="pid">indetyfikator procesu</param>
-/// <param name="dll">nazwa biblioteki dll kt√≥rej uchwytu potrzebujemy</param>
+/// <param name="dll">nazwa biblioteki dll ktÛrej uchwytu potrzebujemy</param>
 /// <returns>
 /// -1 = error
 ///  0 = nie znaleziono dll-ki
@@ -160,7 +160,6 @@ J::Process::GetCodeSection(HANDLE h_mod, LPVOID addr) {
 	Section code = { 0 };
 
 	if (ReadProcessMemory(h_mod, addr, &dos, sizeof(IMAGE_DOS_HEADER), &b_num)) {
-		if (b_num == sizeof(IMAGE_DOS_HEADER)) {
 			LONG64 offset = reinterpret_cast<LONG64>(addr) + dos.e_lfanew;
 			IMAGE_NT_HEADERS64 nt = { 0 };
 			if (ReadProcessMemory(h_mod, reinterpret_cast<LPCVOID>(offset), &nt, sizeof(IMAGE_NT_HEADERS64), &b_num)) {
@@ -169,8 +168,8 @@ J::Process::GetCodeSection(HANDLE h_mod, LPVOID addr) {
 				code.size_ = nt.OptionalHeader.SizeOfCode;
 				code.base_addr_ = (FARPROC)offset;
 			}
-		}
 	}
+
 	return code;
 }
 
@@ -199,6 +198,13 @@ J::Process::Process(const TCHAR* lib, const CHAR* proc) noexcept(true) : self_pr
 	
 }
 
+SIZE_T 
+J::Process::SkipIAT(HANDLE h_mod, LPVOID addr) {
+
+	return 0;
+
+}
+
 J::code_block
 J::Process::Code(DWORD ins_off, DWORD ins_cnt, int skip) {
 
@@ -216,6 +222,7 @@ J::Process::Code(DWORD ins_off, DWORD ins_cnt, int skip) {
 	}
 
 	//skip IAT
+	//bytes_.base_addr_ += SkipIAT(handler_, GetBaseAddresByHandle(handler_));
     
 	bytes_.raw_ = new unsigned char[bytes_.size_ + 2];
 	if (bytes_.raw_ == nullptr) {
