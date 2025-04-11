@@ -6,7 +6,7 @@
 
 #include <cstdio>
 
-#include "../Junkman/Junkman.h"
+#include "../Junkman/Utils.h"
 #include "../Junkman/Memory.h"
 #include "../Junkman/File.h"
 #include "../Junkman/Process.h"
@@ -14,9 +14,9 @@
 
 int main()
 {
-    J::Memory* proc = new J::Process(10284);
+    J::Memory* proc = new J::Process(_T("Notepad.exe"));
     if (proc->Opened()) {
-        std::cout << "Process(10284) opened !" << std::endl;
+        std::cout << "Process(notepad.exe) opened !" << std::endl;
     }
     //J::Memory* file = new J::File(_T("stefan.exe")); 
     //if (file->Opened()) {
@@ -29,7 +29,7 @@ int main()
     
     //reszta konstruktorow
 
-    J::code_block hi = proc1->Code(0, 8, J::SHADOW_STACK | J::DEBUG);
+    J::code_block hi = proc->Code(10, 8, J::DEBUG);
 
     printf("0xEB 0x%02x JMP over block\r\n", hi.block_.length());
     for (size_t i = 0; i < hi.block_.length(); i++) {
