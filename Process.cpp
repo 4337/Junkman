@@ -30,10 +30,10 @@ FARPROC J::Process::GetBaseAddresByHandle(HANDLE h_mod) noexcept(true) {
 /// <summary>
 /// Pobierz processId na podstawie nazwy process
 /// </summary>
-/// <param name="name">const TCHAR* - wskaünik do nazwy procesu</param>
+/// <param name="name">const TCHAR* - wska≈∏nik do nazwy procesu</param>
 /// <returns>
 /// -1 = error
-///  0 = process nie zosta≥ znaleziony
+///  0 = process nie zosta¬≥ znaleziony
 ///  OK = identyfikator process  
 /// </returns>
 DWORD 
@@ -56,7 +56,6 @@ J::Process::GetPidByName(const TCHAR* name) const noexcept(true) {
 		}
         
 		CloseHandle(s_shot);
-		return 0;
 	}
 
 	return ret;
@@ -88,10 +87,10 @@ J::Process::Process(const TCHAR* proc_name) noexcept(true) : Memory(), self_proc
 }
 
 /// <summary>
-/// Pobiera uchwyt do pliku dll w procesie okreúlonym przez identyfikator processu
+/// Pobiera uchwyt do pliku dll w procesie okre≈ìlonym przez identyfikator processu
 /// </summary>
 /// <param name="pid">indetyfikator procesu</param>
-/// <param name="dll">nazwa biblioteki dll ktÛrej uchwytu potrzebujemy</param>
+/// <param name="dll">nazwa biblioteki dll kt√≥rej uchwytu potrzebujemy</param>
 /// <returns>
 /// -1 = error
 ///  0 = nie znaleziono dll-ki
