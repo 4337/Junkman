@@ -12,7 +12,7 @@ Jako że, różne wichry targają moim życiem, pomysł z toalety umarł na lata
 <h3>Rys historyczny.</h3>
 
 Ogólnie silniki polimorficzne składają się z kilku głównych komponentów.<br/>
-Assembler lub dissambler, który pozwala tworzyć lub modyfikować kod assmblera.<br/>
+Assembler/dissambler, który pozwala tworzyć lub modyfikować kod assmblera.<br/>
 Permutator, który zmienia warianty instrukcji assemblera np. 
 <pre>
 mov eax, 1337
