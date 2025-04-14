@@ -24,7 +24,7 @@ add eax, 7
 </pre>
 Komponent który zmienia losowo wykorzystywane rejestry procesora i bloki kodu — przy czym właściwie prawie każda pojedyncza instrukcja może być traktowana jako osobny blok podstawowy.<br/>
 Opcjonalne elementy, które np. wykrywają emulatory, debugery etc.<br/>
-Komponent, który tworzy losowe instrukcje, aby zwiększyć losowość en/dekryptora.<br/>
+Komponent, który tworzy losowe instrukcje, aby zwiększyć złożoność en/dekryptora.<br/>
 Załóżmy, że tak wygląda podstawowy dekryptor bez komponentu, który tworzy losowe instrukcje.
 
 <pre>
