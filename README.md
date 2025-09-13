@@ -37,7 +37,7 @@ init:
 [basic_block_c]
 (permutatoion) mov r, key
 [main_basic_block_b]
-loop_lablel:
+loop_label:
     (permutatoion) decrypt code
 	(permutatoion) inc offset
 	(permutatoion) loop
