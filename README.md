@@ -73,7 +73,7 @@ trash asm instructions
 over_b:
 (permutatoion) mov r, key
 [main_basic_block_b]
-loop_lablel:
+loop_label:
     (permutatoion) decrypt code
 	(permutatoion) jmp over_c
 trash asm instructions
